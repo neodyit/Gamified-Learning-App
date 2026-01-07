@@ -1,0 +1,63 @@
+{
+    "quizzes": [
+        {
+            "title": "Math Basics Quiz",
+            "description": "Test your knowledge on basic algebra and geometry.",
+            "subject": "Mathematics",
+            "grades": [6, 7, 8],
+            "questions": [
+                {
+                    "text": "What is 2 + 2?",
+                    "options": ["3", "4", "5", "6"],
+                    "correctAnswer": 1
+                },
+                {
+                    "text": "What is the area of a square with side 5?",
+                    "options": ["10", "15", "20", "25"],
+                    "correctAnswer": 3
+                },
+                {
+                    "text": "Solve x in 2x = 10",
+                    "options": ["5", "10", "15", "20"],
+                    "correctAnswer": 0
+                }
+            ]
+        },
+        {
+            "title": "Science Fundamentals Quiz",
+            "description": "Quiz on basic physics and chemistry concepts.",
+            "subject": "Science",
+            "grades": [6, 7, 8, 9],
+            "questions": [
+                {
+                    "text": "What is the boiling point of water?",
+                    "options": ["90°C", "100°C", "110°C", "120°C"],
+                    "correctAnswer": 1
+                },
+                {
+                    "text": "What is Newton's first law?",
+                    "options": ["Inertia", "F=ma", "Action-reaction", "Gravity"],
+                    "correctAnswer": 0
+                }
+            ]
+        },
+        {
+            "title": "English Grammar Quiz",
+            "description": "Test your grammar skills.",
+            "subject": "English",
+            "grades": [7, 8, 9, 10],
+            "questions": [
+                {
+                    "text": "What is the past tense of 'go'?",
+                    "options": ["Goed", "Went", "Gone", "Going"],
+                    "correctAnswer": 1
+                },
+                {
+                    "text": "Identify the adjective in 'The quick brown fox'.",
+                    "options": ["The", "Quick", "Brown", "Fox"],
+                    "correctAnswer": 1
+                }
+            ]
+        }
+    ]
+}

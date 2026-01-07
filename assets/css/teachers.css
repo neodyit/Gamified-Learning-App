@@ -1,0 +1,8 @@
+
+.course-card p.muted {
+    color: var(--muted);
+}
+
+.action-btn {
+    min-width: 120px;
+}

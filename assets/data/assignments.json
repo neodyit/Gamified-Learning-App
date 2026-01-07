@@ -1,0 +1,52 @@
+{
+    "assignments": [
+        {
+            "title": "Math Homework - Algebra Practice",
+            "description": "Solve 10 algebra problems from Chapter 3. Focus on quadratic equations and factoring.",
+            "dueDate": "2025-09-20T23:59:59Z",
+            "grades": [6, 7, 8, 9, 10],
+            "completed": false,
+            "course": "Mathematics"
+        },
+        {
+            "title": "Science Report - Ecosystems",
+            "description": "Write a 500-word report on ecosystems. Include diagrams and references.",
+            "dueDate": "2025-09-18T23:59:59Z",
+            "grades": [6, 7, 8, 9],
+            "completed": false,
+            "course": "Science"
+        },
+        {
+            "title": "English Essay - My Favorite Book",
+            "description": "Write a 300-word essay on 'My Favorite Book'. Include analysis and personal reflection.",
+            "dueDate": "2025-09-22T23:59:59Z",
+            "grades": [7, 8, 9, 10],
+            "completed": true,
+            "course": "English"
+        },
+        {
+            "title": "History Project - Ancient Civilizations",
+            "description": "Create a timeline of ancient civilizations. Include key events and figures.",
+            "dueDate": "2025-09-25T23:59:59Z",
+            "grades": [6, 7, 8],
+            "completed": false,
+            "course": "Social Studies"
+        },
+        {
+            "title": "Algebra Test Review",
+            "description": "Complete review questions for the upcoming algebra test. Focus on weak areas.",
+            "dueDate": "2025-09-17T23:59:59Z",
+            "grades": [7, 8, 9],
+            "completed": true,
+            "course": "Mathematics"
+        },
+        {
+            "title": "Physics Lab Report",
+            "description": "Write lab report on Newton's Laws experiment. Include calculations and graphs.",
+            "dueDate": "2025-09-16T23:59:59Z",
+            "grades": [8, 9, 10],
+            "completed": false,
+            "course": "Science"
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+.course-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--glass);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(12px);
+    transition: transform var(--transition), box-shadow var(--transition);
+    width: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.course-card-content {
+    flex-grow: 1;
+    max-width: 70%;
+}
+
+.course-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.course-card p.description {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.progress-bar {
+    background-color: rgba(var(--primary), 0.2);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    transition: width var(--transition);
+}
+
+.course-card p.meta {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.rating i {
+    color: var(--warning);
+    font-size: 0.9rem;
+}
+
+.course-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.action-btn.primary {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+}
+
+.action-btn.primary:hover {
+    transform: scale(1.05);
+}
+
+.action-btn.secondary {
+    background: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.action-btn.secondary:hover {
+    background-color: rgba(var(--primary), 0.1);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .course-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .course-card-content {
+        max-width: 100%;
+    }
+
+    .course-actions {
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    .action-btn {
+        width: 48%;
+        text-align: center;
+    }
+}

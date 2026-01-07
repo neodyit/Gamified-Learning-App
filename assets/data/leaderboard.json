@@ -1,0 +1,12 @@
+{
+    "users": [
+        { "name": "Aditya Sharma", "xp": 4500, "grade": 8, "classSection": "B" },
+        { "name": "Akash Goswami", "xp": 3800, "grade": 7, "classSection": "A" },
+        { "name": "Tony Stark", "xp": 3200, "grade": 9, "classSection": "C" },
+        { "name": "Khushi Pal", "xp": 2800, "grade": 6, "classSection": "A" },
+        { "name": "Lawrence Bisnoi", "xp": 2500, "grade": 8, "classSection": "B" },
+        { "name": "Bruuce Lee", "xp": 2200, "grade": 7, "classSection": "C" },
+        { "name": "George Wilson", "xp": 1900, "grade": 9, "classSection": "A" },
+        { "name": "Hannah Clark", "xp": 1600, "grade": 6, "classSection": "B" }
+    ]
+}
