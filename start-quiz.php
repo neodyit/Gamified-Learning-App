@@ -90,7 +90,7 @@
         </aside>
     </div>
 
-    <script src="assets/js/script.js?v=1.3"></script>
+    <script src="assets/js/script.js?v=1.4"></script>
     <script src="assets/js/start-quiz.js"></script>
 </body>
 </html>

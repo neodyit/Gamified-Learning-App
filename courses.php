@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/courses.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -72,36 +74,97 @@
             </div>
         </main>
 
-        <aside class="sidebar-right">
-            <h2>Missions</h2>
-            <div class="missions">
-                <h3>Pending</h3>
-                <div class="mission-item">
-                    <span>Calculus Quiz</span>
-                    <span class="badge" style="background: var(--error);"><i class="fas fa-exclamation"></i></span>
-                </div>
-                <div class="mission-item">
-                    <span>Physics Lab</span>
-                    <span class="badge" style="background: var(--error);"><i class="fas fa-exclamation"></i></span>
-                </div>
-                <div class="mission-item">
-                    <span>History Essay</span>
-                    <span class="badge" style="background: var(--error);"><i class="fas fa-exclamation"></i></span>
-                </div>
-                <h3>Completed</h3>
-                <div class="mission-item">
-                    <span>Algebra Test</span>
-                    <span class="badge"><i class="fas fa-check"></i></span>
-                </div>
-                <div class="mission-item">
-                    <span>Chemistry Notes</span>
-                    <span class="badge"><i class="fas fa-check"></i></span>
-                </div>
+        <aside class="sidebar-right missions">
+            <h2 class="missions-title"><i class="fas fa-chart-line"></i> Your Courses</h2>
+
+            <!-- Course Progress Section -->
+            <div class="mission-section">
+                <h3 class="mission-subtitle"><i class="fas fa-book"></i> Mathematics</h3>
+                <ul class="mission-list">
+                    <li>
+                        <span class="mission-label">Progress</span>
+                        <span class="mission-count">75%</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Modules Completed</span>
+                        <span class="mission-count">12</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Rating</span>
+                        <span class="mission-count">4.8 ⭐</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mission-section">
+                <h3 class="mission-subtitle"><i class="fas fa-book"></i> Science</h3>
+                <ul class="mission-list">
+                    <li>
+                        <span class="mission-label">Progress</span>
+                        <span class="mission-count">60%</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Modules Completed</span>
+                        <span class="mission-count">10</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Rating</span>
+                        <span class="mission-count">4.7 ⭐</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mission-section">
+                <h3 class="mission-subtitle"><i class="fas fa-book"></i> Social Studies</h3>
+                <ul class="mission-list">
+                    <li>
+                        <span class="mission-label">Progress</span>
+                        <span class="mission-count">40%</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Modules Completed</span>
+                        <span class="mission-count">15</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Rating</span>
+                        <span class="mission-count">4.5 ⭐</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mission-section">
+                <h3 class="mission-subtitle"><i class="fas fa-book"></i> English</h3>
+                <ul class="mission-list">
+                    <li>
+                        <span class="mission-label">Progress</span>
+                        <span class="mission-count">85%</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Modules Completed</span>
+                        <span class="mission-count">8</span>
+                    </li>
+                    <li>
+                        <span class="mission-label">Rating</span>
+                        <span class="mission-count">4.6 ⭐</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--  Tips Section -->
+            <div class="mission-section">
+                <h3 class="mission-subtitle"><i class="fas fa-lightbulb"></i> Study Tips</h3>
+                <ul class="mission-tips">
+                    <li>🎯 Focus on one module at a time</li>
+                    <li>📒 Take notes while learning</li>
+                    <li>⚡ Review completed modules regularly</li>
+                </ul>
             </div>
         </aside>
+
     </div>
 
-    <script src="assets/js/script.js?v=1.3"></script>
+    <script src="assets/js/script.js?v=1.4"></script>
     <script src="assets/js/courses.js"></script>
 </body>
+
 </html>

@@ -81,24 +81,33 @@
             </div>
         </main>
 
-        <aside class="sidebar-right">
-            <h2>Quick Stats</h2>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 0.5rem;"><strong>Pending:</strong> <span id="pending-count">5</span></li>
-                <li style="margin-bottom: 0.5rem;"><strong>Completed:</strong> <span id="completed-count">3</span></li>
-                <li><strong>Overdue:</strong> <span id="overdue-count" style="color: var(--error);">2</span></li>
-            </ul>
+       <aside class="sidebar-right missions">
+    <h2 class="missions-title"><i class="fas fa-chart-line"></i> Quick Stats</h2>
 
-            <h2>Tips</h2>
-            <ul style="list-style: none; font-size: 0.9rem; color: var(--muted);">
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-lightbulb"></i> Set daily goals</li>
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-lightbulb"></i> Review notes before starting</li>
-                <li><i class="fas fa-lightbulb"></i> Break tasks into smaller steps</li>
-            </ul>
-        </aside>
+    <div class="mission-section">
+        <h3 class="mission-subtitle"><i class="fas fa-tasks"></i> Current Progress</h3>
+        <ul class="mission-list">
+            <li><span class="mission-label">Pending</span><span id="pending-count" class="mission-count">3</span></li>
+            <li><span class="mission-label">Completed</span><span id="completed-count" class="mission-count">2</span></li>
+            <li><span class="mission-label">Overdue</span>
+                <span id="overdue-count" class="mission-count overdue">0</span>
+            </li>
+        </ul>
     </div>
 
-    <script src="assets/js/script.js?v=1.3"></script>
+    <div class="mission-section">
+        <h3 class="mission-subtitle"><i class="fas fa-lightbulb"></i> Tips</h3>
+        <ul class="mission-tips">
+            <li>🎯 Set daily goals</li>
+            <li>📒 Review notes before starting</li>
+            <li>⚡ Break tasks into smaller steps</li>
+        </ul>
+    </div>
+</aside>
+
+    </div>
+
+    <script src="assets/js/script.js?v=1.4"></script>
     <script src="assets/js/assignments.js"></script>
 </body>
 </html>

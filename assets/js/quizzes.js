@@ -1,32 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Load user data from localStorage
-    const userData = JSON.parse(localStorage.getItem('user')) || {};
-    const userGrade = parseInt(userData.grade) ;
-    const userName = userData.name;
-    // Set welcome message with null checks
-    const welcomeUserNameElement = document.getElementById('welcome-user-name');
-    if (welcomeUserNameElement) welcomeUserNameElement.textContent = `Welcome back, ${userName}!`;
-    const userNameElement = document.getElementById('user-name');
-    if (userNameElement) userNameElement.textContent = userName;
-    const userClassSectionElement = document.getElementById('user-class-section');
-    if (userClassSectionElement) userClassSectionElement.textContent = `Class ${userGrade}th | A`;
+document.addEventListener("DOMContentLoaded", () => {
+  const userData = JSON.parse(localStorage.getItem("user")) || {};
+  const userGrade = parseInt(userData.grade);
+  const userName = userData.name;
+  const welcomeUserNameElement = document.getElementById("welcome-user-name");
+  if (welcomeUserNameElement)
+    welcomeUserNameElement.textContent = `Welcome back, ${userName}!`;
+  const userNameElement = document.getElementById("user-name");
+  if (userNameElement) userNameElement.textContent = userName;
+  const userClassSectionElement = document.getElementById("user-class-section");
+  if (userClassSectionElement)
+    userClassSectionElement.textContent = `Class ${userGrade}th | A`;
 
-    const quizzesList = document.getElementById('quizzes-list');
-    const streakElement = document.querySelector('.streak');
+  const quizzesList = document.getElementById("quizzes-list");
+  const streakElement = document.querySelector(".streak");
 
-    // Fetch quizzes from quizzes.json
-    fetch('assets/data/quizzes.json')
-        .then(response => response.json())
-        .then(data => {
-            // Filter quizzes based on user's grade
-            const userQuizzes = data.quizzes.filter(quiz => quiz.grades.includes(userGrade));
+  fetch("assets/data/quizzes.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const userQuizzes = data.quizzes.filter((quiz) =>
+        quiz.grades.includes(userGrade),
+      );
 
-            // Update streak
-            if (streakElement) streakElement.innerHTML = `<i class="fas fa-brain"></i> ${userQuizzes.length} Quizzes Available`;
+      if (streakElement)
+        streakElement.innerHTML = `<i class="fas fa-brain"></i> ${userQuizzes.length} Quizzes Available`;
 
-            // Render quizzes
-            quizzesList.innerHTML = userQuizzes.length > 0 
-                ? userQuizzes.map(quiz => `
+      quizzesList.innerHTML =
+        userQuizzes.length > 0
+          ? userQuizzes
+              .map(
+                (quiz) => `
                     <div class="quiz-card">
                         <div class="quiz-content">
                             <h3>${quiz.title}</h3>
@@ -41,27 +43,28 @@ document.addEventListener('DOMContentLoaded', () => {
                             <button class="action-btn secondary">Details</button>
                         </div>
                     </div>
-                `).join('')
-                : '<p class="muted text-center">No quizzes available for your grade.</p>';
+                `,
+              )
+              .join("")
+          : '<p class="muted text-center">No quizzes available for your grade.</p>';
 
-            // Add event listeners for start buttons
-            document.querySelectorAll('.start-quiz-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const subject = e.target.dataset.subject;
-                    const grade = e.target.dataset.grade;
-                    window.location.href = `start-quiz.php?subject=${encodeURIComponent(subject)}&grade=${grade}`;
-                });
-            });
-
-            // Details buttons
-            document.querySelectorAll('.action-btn.secondary').forEach(button => {
-                button.addEventListener('click', () => {
-                    alert('Quiz details coming soon!');
-                });
-            });
-        })
-        .catch(error => {
-            console.error('Error loading quizzes:', error);
-            quizzesList.innerHTML = '<p class="muted text-center">Error loading quizzes. Please try again later.</p>';
+      document.querySelectorAll(".start-quiz-btn").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const subject = e.target.dataset.subject;
+          const grade = e.target.dataset.grade;
+          window.location.href = `start-quiz.php?subject=${encodeURIComponent(subject)}&grade=${grade}`;
         });
+      });
+
+      document.querySelectorAll(".action-btn.secondary").forEach((button) => {
+        button.addEventListener("click", () => {
+          alert("Quiz details coming soon!");
+        });
+      });
+    })
+    .catch((error) => {
+      console.error("Error loading quizzes:", error);
+      quizzesList.innerHTML =
+        '<p class="muted text-center">Error loading quizzes. Please try again later.</p>';
+    });
 });

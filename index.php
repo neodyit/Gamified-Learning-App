@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>z
+<body> 
     <header>
         <div class="logo">
             <i class="fas fa-rocket"></i>
@@ -62,7 +62,7 @@
                     <h2 id="welcome-user-name">Welcome back, QuestMaster!</h2>
                     <p class="muted">Continue your learning journey today.</p>
                 </div>
-                <div class="streak"><i class="fas fa-fire"></i> 7-Day Streak</div>
+                <!--<div class="streak"><i class="fas fa-fire"></i> 7-Day Streak</div>-->
             </div>
 
             <div class="stats-grid">
@@ -164,7 +164,7 @@
         </aside>
     </div>
 
-    <script src="assets/js/script.js?v=1.3"></script>
+    <script src="assets/js/script.js?v=1.4"></script>
 </body>
 
 </html>

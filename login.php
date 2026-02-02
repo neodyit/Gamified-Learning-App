@@ -99,6 +99,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -269,7 +270,8 @@
 </head>
 
 <body>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i> Dark Mode</button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i> Dark
+        Mode</button>
     <div class="container">
         <div class="login-card">
             <div class="logo">
@@ -336,7 +338,6 @@
             const user = users.find(u => u.email === email && u.password === password);
 
             if (user) {
-                // Store user data in localStorage
                 localStorage.setItem('user', JSON.stringify({
                     email: user.email,
                     role: user.role,
@@ -345,14 +346,12 @@
                     section: user.section
                 }));
 
-                // Redirect based on role
                 if (user.role === 'student') {
                     window.location.href = 'index.php';
                 } else if (user.role === 'teacher') {
                     window.location.href = 'admin.php';
                 }
             } else {
-                // Show error message
                 errorMessage.style.display = 'block';
                 setTimeout(() => {
                     errorMessage.style.display = 'none';
@@ -360,7 +359,6 @@
             }
         });
 
-        // Handle enter key press
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && emailInput.value && passwordInput.value) {
                 loginBtn.click();

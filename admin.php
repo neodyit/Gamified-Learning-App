@@ -1,4 +1,3 @@
-<!-- teachers.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +13,7 @@
         rel="stylesheet">
     <link rel="preload" href="assets/images/profile.jpg" as="image">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/teachers.css"> <!-- Additional CSS for teacher's dashboard -->
+    <link rel="stylesheet" href="assets/css/teachers.css">
 </head>
 
 <body>
@@ -34,7 +33,8 @@
     <div class="container">
         <nav id="sidebar">
             <ul class="nav-list">
-                <li class="nav-item"><a href="teachers.php" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="teachers.php" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
                 <li class="nav-item"><a href="courses.php"><i class="fas fa-book"></i> Courses</a></li>
                 <li class="nav-item"><a href="students.php"><i class="fas fa-users"></i> Students</a></li>
                 <li class="nav-item"><a href="assignments.php"><i class="fas fa-tasks"></i> Assignments</a></li>
@@ -159,7 +159,8 @@
             </div>
             <h2>Achievements</h2>
             <ul style="list-style: none;">
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-medal" style="color: gold;"></i> Master Educator</li>
+                <li style="margin-bottom: 0.5rem;"><i class="fas fa-medal" style="color: gold;"></i> Master Educator
+                </li>
                 <li style="margin-bottom: 0.5rem;"><i class="fas fa-medal" style="color: silver;"></i> Class Mentor</li>
                 <li><i class="fas fa-medal" style="color: #cd7f32;"></i> Teaching Star</li>
             </ul>

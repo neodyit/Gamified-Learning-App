@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/profile.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -115,23 +117,26 @@
             </div>
         </main>
 
-        <aside class="sidebar-right">
-            <h2>Quick Actions</h2>
-            <ul style="list-style: none; font-size: 0.9rem; color: var(--muted);">
-                <li style="margin-bottom: 0.5rem;"><a href="quizzes.php"><i class="fas fa-brain"></i> Take a Quiz</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="courses.php"><i class="fas fa-book"></i> View Courses</a></li>
-                <li><a href="leaderboard.php"><i class="fas fa-trophy"></i> Check Leaderboard</a></li>
+        <aside class="sidebar-right missions">
+            <h2 class="missions-title"><i class="fas fa-bolt"></i> Quick Actions</h2>
+            <ul class="mission-list">
+                <li><a href="quizzes.php"><i class="fas fa-brain"></i> Take a Quiz</a></li>
+                <li><a href="courses.php"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="leaderboard.php"><i class="fas fa-trophy"></i> Leaderboard</a></li>
             </ul>
-            <h2>Profile Tips</h2>
-            <ul style="list-style: none; font-size: 0.9rem; color: var(--muted);">
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-user-edit"></i> Update your details regularly</li>
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-lock"></i> Keep your email secure</li>
-                <li><i class="fas fa-language"></i> Change language to suit your learning</li>
+
+            <h2 class="missions-title"><i class="fas fa-lightbulb"></i> Tips</h2>
+            <ul class="mission-tips">
+                <li>📝 Update your details</li>
+                <li>🔒 Keep your email secure</li>
+                <li>🌐 Adjust language settings</li>
             </ul>
         </aside>
+
     </div>
 
-    <script src="assets/js/script.js?v=1.3"></script>
+    <script src="assets/js/script.js?v=1.4"></script>
     <script src="assets/js/profile.js"></script>
 </body>
+
 </html>

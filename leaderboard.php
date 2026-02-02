@@ -13,6 +13,22 @@
     <link rel="preload" href="assets/images/profile.jpg" as="image">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/leaderboard.css">
+    <style>
+        .mission-progress {
+    height: 8px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -80,23 +96,66 @@
             </div>
         </main>
 
-        <aside class="sidebar-right">
-            <h2>Your Stats</h2>
-            <ul style="list-style: none; font-size: 0.9rem; color: var(--muted);">
-                <li style="margin-bottom: 0.5rem;"><strong>Rank:</strong> <span id="user-rank">N/A</span></li>
-                <li style="margin-bottom: 0.5rem;"><strong>XP:</strong> <span id="user-xp">3,200</span></li>
-                <li><strong>Level:</strong> <span id="user-level">20</span></li>
-            </ul>
-            <h2>Leaderboard Tips</h2>
-            <ul style="list-style: none; font-size: 0.9rem; color: var(--muted);">
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-trophy"></i> Complete quizzes to earn XP</li>
-                <li style="margin-bottom: 0.5rem;"><i class="fas fa-star"></i> Level up with consistent learning</li>
-                <li><i class="fas fa-chart-line"></i> Check back daily for updated ranks</li>
-            </ul>
-        </aside>
+        <aside class="sidebar-right missions">
+    <h2 class="missions-title"><i class="fas fa-trophy"></i> Your Stats</h2>
+
+    <!-- Rank -->
+    <div class="mission-section">
+        <h3 class="mission-subtitle"><i class="fas fa-medal"></i> Rank</h3>
+        <div class="mission-progress">
+            <div class="progress-bar" style="width: 75%; background: var(--primary);"></div>
+        </div>
+        <ul class="mission-list">
+            <li>
+                <span class="mission-label">Current Rank</span>
+                <span id="user-rank" class="mission-count">5</span>
+            </li>
+        </ul>
     </div>
 
-    <script src="assets/js/script.js?v=1.3"></script>
+    <!-- XP -->
+    <div class="mission-section">
+        <h3 class="mission-subtitle"><i class="fas fa-coins"></i> XP</h3>
+        <div class="mission-progress">
+            <div class="progress-bar" style="width: 65%; background: #3b82f6;"></div>
+        </div>
+        <ul class="mission-list">
+            <li>
+                <span class="mission-label">Current XP</span>
+                <span id="user-xp" class="mission-count">3,200</span>
+            </li>
+            <li>
+                <span class="mission-label">Next Level</span>
+                <span class="mission-count">3,500 XP</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Level -->
+    <div class="mission-section">
+        <h3 class="mission-subtitle"><i class="fas fa-star"></i> Level</h3>
+        <ul class="mission-list">
+            <li>
+                <span class="mission-label">Current Level</span>
+                <span id="user-level" class="mission-count">20</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Leaderboard Tips -->
+    <div class="mission-section">
+        <h3 class="mission-subtitle"><i class="fas fa-lightbulb"></i> Tips</h3>
+        <ul class="mission-tips">
+            <li>🏆 Complete quizzes to earn XP</li>
+            <li>⭐ Level up with consistent learning</li>
+            <li>📈 Check back daily for updated ranks</li>
+        </ul>
+    </div>
+</aside>
+
+    </div>
+
+    <script src="assets/js/script.js?v=1.4"></script>
     <script src="assets/js/leaderboard.js"></script>
 </body>
 </html>
